@@ -1,22 +1,22 @@
 print("Esse é um programa que ajuda você a calcular o seu Coeficiente de Rendimento.")
 
-nota_cont=0
-ch=0
+soma_media_ponderada = 0
+carga_horaria_total = 0
 
-qtd_materia=int(input("Quantas matérias você tem? "))
+qtd_materia = int(input("Quantas matérias você tem? "))
 
 for i in range(qtd_materia):
-    mat= int(input(f"Digite a carga horária da {i+1}ª matéria: "))
-    nota= float(input(f"Digite a média da {i+1}ª matéria: "))
-    nota_cont += nota*mat
-    ch += mat
+    carga_horaria = int(input(f"Digite a carga horária da {i+1}ª matéria: "))
+    media = float(input(f"Digite a média da {i+1}ª matéria: "))
+    soma_media_ponderada += media * carga_horaria
+    carga_horaria_total += carga_horaria
 
-periodo=(input("Esse é o seu primeiro período? (S/N) ").upper())
+primeiro_periodo = (input("Esse é o seu primeiro período? (S/N) ").upper())
 
-if(periodo=="S"):
-    calc = nota_cont / ch
+if(primeiro_periodo == 'S'):
+    novo_cr = soma_media_ponderada / carga_horaria_total
 else:
-    cr_antigo=float(input("Digite o seu CR antigo: "))
-    calc = ((nota_cont / ch)+cr_antigo)/2
+    cr_antigo = float(input("Digite o seu CR antigo: "))
+    novo_cr = ((soma_media_ponderada / carga_horaria_total) + cr_antigo) / 2
     
-print("CR atual:", round(calc,2))
+print(f"CR atual: {round(novo_cr, 2)}")
