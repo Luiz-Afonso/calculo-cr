@@ -1,5 +1,3 @@
-# DESCRIÇÃO DA APLICAÇÃO: Sistema que coleta e manipula médias e cargas horárias de matérias para realizar o cálculo do Coeficiente de Rendimento acadêmico (CR).
-
 print("Esse é um programa que ajuda você a calcular o seu Coeficiente de Rendimento.")
 
 nota_cont=0
